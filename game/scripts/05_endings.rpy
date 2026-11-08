@@ -11,7 +11,7 @@ label ending_glass_alibi:
     "Right against the neural port behind my ear."
 
     scene bg_cyber_clinic_morgue with dissolve
-    show ritesh_crying at center
+    show ritesh_shocked at center
 
     "I hit the wet tiles. Above me, the red emergency lights spin like a dying carousel. Ritesh drops his gun and falls to his knees beside me, cradling my head in his lap—just like he must have held the real Saban six months ago."
 
@@ -42,7 +42,7 @@ label ending_red_canvas:
 
     "Only Ritesh remains, kneeling among the corpses, out of ammo, staring up at me."
 
-    show ritesh_bloodied at center with dissolve
+    show ritesh_angry at center with dissolve # TODO: replace here with bloodied ritesh
 
     damaai_saarki "Six months you made me wear that dead cop's cheap cologne, Ritesh. You made me weep over his photographs. You should be terrified."
 

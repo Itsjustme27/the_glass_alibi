@@ -10,8 +10,8 @@ label act_one_gallery:
     "2:15 AM. Ritesh's private restoration studio, tucked beneath an old market building in Bhakunde Besi."
     "Paubha paintings, old Bhairav masks, and disassembled brass idols line the tables under harsh UV lamps. It looks less like an art studio and more like an ICU for expensive statues whose owners have more money than sense."
 
-    show ritesh_shirt_sleeves at left with dissolve
-    show prosecutor_suit at right with dissolve
+    show ritesh_neutral at left with dissolve
+    show prosecutor_neutral at right with dissolve
 
     p "You promised me you were out of the fixer game, Ritesh! My father's chief accountant gets carved up like a holiday roast, and your brother is the first man on the scene?!"
 
@@ -31,7 +31,7 @@ label act_one_gallery:
 
     p "Take this encrypted drive. It's the sealed indictment against my father's personal neuro-clinic—[DOCTOR_NAME]'s black site. Destroy it. If Saban finds it, he'll go after my father directly, and neither of us will survive the week."
 
-    hide prosecutor_suit with dissolve
+    hide prosecutor_neutral with dissolve
 
     "The heavy steel door clangs shut as [PROSECUTOR_NAME] leaves. Ritesh walks toward the back office to lock the drive in his floor safe."
     "Wait. The floor safe isn't behind his desk. He's walking toward the false brick wall behind the old paubha of Bhairav, whose painted eyes seemed to judge every bad financial decision in the room."
@@ -59,7 +59,7 @@ label act_one_vault_discovery:
 
     r "I told you not to look in the puddle, Saban."
 
-    show ritesh_dark_silhouette at center with dissolve
+    show ritesh_angry at center with dissolve
 
     jump act_one_climax
 
@@ -67,7 +67,7 @@ label act_one_vault_discovery:
 label act_one_confrontation:
 
     scene bg_secret_vault with fade
-    show ritesh_dark_silhouette at center with dissolve
+    show ritesh_neutral at center with dissolve
 
     "I kick the false wall open before the latch clicks. Inside the hidden alcove sits a surgical tray, seven glass vials containing severed ring fingers, and the murder weapons from every Damaai Saarki crime scene in the city."
 
@@ -85,6 +85,7 @@ label act_one_climax:
     if suspicion_ritesh >= 3:
         "The van. The pigment. The pity. Every warning sign I swallowed tonight finally comes back up at once."
 
+    show ritesh_angry at center with dissolve
     "Ritesh looks down at the revolver pressed against his silk shirt. He doesn't raise his hands. He looks exhausted—like a man who has been carrying a corpse up a mountain for six months."
 
     r "Pull the trigger if it makes the headache stop, Saban. Lord knows I'm tired of mopping the floors."
@@ -96,6 +97,7 @@ label act_one_climax:
     "A high-pitched whine pierces my left ear. The room tilts forty-five degrees."
 
     show bg_secret_vault with vpunch
+    show saban_shocked at center with dissolve
 
     s "Shut up! You're lying! I'm Saban Hoelmes! I hunt monsters, I don't—"
 

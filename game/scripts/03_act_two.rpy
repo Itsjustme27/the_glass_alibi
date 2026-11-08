@@ -43,7 +43,7 @@ label act_two_unreliable_ui:
 
     s "What is in my head?! Ritesh, what the hell is inside my skull?!"
 
-    show ritesh_kneeling at center with dissolve
+    show ritesh_angry at center with dissolve
 
     r "Every time your adrenaline spikes, the graft slips. You black out, you butcher another link in [BOSS_NAME]'s chain, and then your neural implant hallucinates a righteous detective story so you can live with yourself."
 
@@ -57,7 +57,7 @@ label act_two_unreliable_ui:
     d "Nepal Police—Sorry, purano film ko dialogue niskyo. Navama Ghat ko Prahari Task Force! Haath mathi, Hoelmes!"
 
     show detective_tactical at right with dissolve
-    show ritesh_kneeling at left
+    show ritesh_angry at left
 
     "The studio skylight shatters. [DETECTIVE_NAME] rappels down onto the restoration tables, laser sight painted squarely between my eyes."
 
@@ -67,6 +67,7 @@ label act_two_unreliable_ui:
 
     r "Run, Saban! Go to Baireni! Find [DOCTOR_NAME]! If he takes you into custody, they'll run a cranial scan and the Syndicate will execute you before sunrise!"
 
+    show detective_angry at center with dissolve
     d "Freeze! Don't make me shoot through him, Hoelmes!"
 
     menu:

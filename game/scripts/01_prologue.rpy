@@ -12,6 +12,7 @@ label prologue_witness:
     "The night manager is on his knees in the runoff, hands laced over his head like a man praying to a broken streetlight."
     "He saw me come out of the building. Or he thinks he did. In this city, seeing the wrong thing is a terminal condition."
 
+    show saban_neutral at center with dissolve
     menu:
         "Spare the witness and tell him to leave town.":
             $ spared_witness = True
@@ -39,11 +40,13 @@ label prologue_present:
     "Mero kalo overcoat ma sasto local raksi ra kasai aruko paap ko gandha adkeko cha."
     "Six months since the Navama Ghat raid. Six months since a bullet grazed my temporal lobe, put my partner in a closed casket, and left my memory looking like a government road after monsoon."
 
-    show ritesh_coat_neutral at center with dissolve
+    show ritesh_neutral at center with dissolve
 
     r "You're staring at the puddle again, Saban. If you're looking for your reflection, save your energy. You won't like what's looking back."
 
     "The man I know as my adoptive brother steps under the awning, shaking acid rain off a black chhata that probably costs more than my rent. Ritesh always looked less like an art restorer and more like a Lakhey who wandered out of Indra Jatra, opened an underworld accounting firm, and started charging demons late fees."
+    
+    show saban_neutral at left with dissolve
 
     s "The body upstairs, Ritesh. Kotha No 420. Same surgical knot. Same missing left ring finger. Damaai Saarki is mocking me."
 
@@ -53,11 +56,17 @@ label prologue_present:
 
     r "Do you have any idea what I had to promise the thana pramukh just to get the lobby CCTV wiped tonight? [PROSECUTOR_NAME] thinks I'm having an affair because I spend every Tuesday at 3 AM bribing coroners for you."
 
+
+    show saban_neutral at center with dissolve
+
     s "Your boyfriend is the Deputy Sarkari Wakil. Tell him even Yamraj needs paperwork before collecting someone."
 
-    show ritesh_coat_serious at center
+    show ritesh_angry at center
 
     r "Don't joke about [PROSECUTOR_NAME], Saban. Not tonight. That stiff upstairs in Kotha No 420? He was an accountant for [BOSS_NAME]."
+
+
+    show saban_neutral at center with dissolve
 
     s "Wait. [BOSS_NAME]? Your boyfriend's estranged father? The head of the Kaalo Murkutta?"
 
@@ -77,10 +86,12 @@ label prologue_present:
             "Ritesh doesn't blink. The corner of his mouth twitches—not guilt, but an unbearable, suffocating pity."
             r "Because someone had to carry you out of the lobby before you woke up, brother. Put your gloves on. [DETECTIVE_NAME] is coming."
 
-    show ritesh_coat_neutral at left with move
-    show detective_raincoat at right with dissolve
+    show ritesh_neutral at left with move
+    show detective_neutral at right with dissolve
 
     d "Well, well. The amnesia twins. Tell me, Hoelmes, does your brother always hold your umbrella while you contaminate my crime scenes, or is today your anniversary?"
+
+    show saban_neutral at center with move
 
     s "Good evening to you too, [DETECTIVE_NAME]. You're late. Damaai Saarki left twenty minutes ago."
 

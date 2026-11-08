@@ -1,4 +1,5 @@
 # Automated branch coverage for The Glass Alibi.
+# Requires Ren'Py 8.5.0 or newer (automated testing was added in 8.5.0).
 # Run: ./renpy.sh the_glass_alibi test glass_alibi --overwrite_screenshots
 # (from the SDK root). The ui suite runs separately: test ui.
 
