@@ -1,33 +1,23 @@
-﻿# The script of the game goes in this file.
-
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
-
-define e = Character("Eileen")
-
-
-# The game starts here.
+﻿# THE GLASS ALIBI — entry point.
+#
+# Story flow:
+#   start -> prologue_witness -> prologue_present -> act_one_gallery
+#   act_one_gallery -> (vault_discovery | confrontation) -> act_one_climax
+#   act_one_climax -> act_two_unreliable_ui -> act_three_clinic
+#   act_three_clinic -> (ending_glass_alibi | ending_red_canvas | ending_broken_mirror)
+#
+# Scene scripts live in game/scripts/. Characters: characters.rpy.
+# State: variables.rpy. Images: assets.rpy. Presentation: effects.rpy.
 
 label start:
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
+    stop music fadeout 1.0
+    scene black with fade
 
-    scene bg room
+    neos "BOOTING ENGRAM_ARCHIVE: SUBJECT_09 ('SABAN_HOELMES')..."
+    neos "WARNING: SYNAPTIC DRIFT DETECTED AT SECTOR 404. APPLYING DAMPENERS."
+    neos "PLAYING OCULAR ARCHIVE: TIMESTAMP 23:40. LOCATION: KOTHA_420 SERVICE ALLEY."
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
+    $ show_chapter("PRARAMBHA", "HILO MA DEKHINE CHHAAYA")
 
-    show eileen happy
-
-    # These display lines of dialogue.
-
-    e "You've created a new Ren'Py game."
-
-    e "Once you add a story, pictures, and music, you can release it to the world!"
-
-    # This ends the game.
-
-    return
+    jump prologue_witness

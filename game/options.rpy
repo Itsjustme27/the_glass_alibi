@@ -12,7 +12,7 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("the_glass_alibi")
+define config.name = _("The Glass Alibi")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
@@ -23,13 +23,20 @@ define gui.show_name = True
 
 ## The version of the game.
 
-define config.version = "1.0"
+define config.version = "0.1.0"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
 ## triple-quotes, and leave a blank line between paragraphs.
 
 define gui.about = _p("""
+The Glass Alibi — a cyberpunk/noir psychological identity thriller set in a rain-soaked, neon-lit Nepal.
+
+A detective with a fractured memory hunts the serial killer Damaai Saarki. Every clue he uncovers points somewhere he cannot afford to look.
+
+Contains violence, strong themes, and an unreliable narrator.
+
+This build uses temporary placeholder art and audio. See ASSET_CREDITS.md for details.
 """)
 
 
@@ -50,6 +57,10 @@ define config.has_sound = True
 define config.has_music = True
 define config.has_voice = True
 
+## Modern [variable] interpolation only. Legacy %-formatting would treat the
+## "85%... 92%..." in NEURAL_OS dialogue as format codes and crash.
+define config.old_substitutions = False
+
 
 ## To allow the user to play a test sound on the sound or voice channel,
 ## uncomment a line below and use it to set a sample sound to play.
@@ -58,11 +69,9 @@ define config.has_voice = True
 # define config.sample_voice = "sample-voice.ogg"
 
 
-## Uncomment the following line to set an audio file that will be played while
-## the player is at the main menu. This file will continue playing into the
-## game, until it is stopped or another file is played.
+## The main menu theme continues into the game until label start stops it.
 
-# define config.main_menu_music = "main-menu-theme.ogg"
+define config.main_menu_music = "audio/rain_synth_drone.ogg"
 
 
 ## Transitions #################################################################
@@ -183,6 +192,12 @@ init python:
     build.classify('**/.**', None)
     build.classify('**/#**', None)
     build.classify('**/thumbs.db', None)
+
+    ## Development-only files stay out of distributions.
+    build.classify('tools/**', None)
+    build.classify('game/tests/**', None)
+    build.classify('tests/**', None)
+    build.classify('OPEN_QUESTIONS.md', None)
 
     ## To archive files, classify them as 'archive'.
 
